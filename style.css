@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6; /* Light pink background */
+    color: #d50000; /* Dark red text */
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.heart-image {
+    width: 100px; /* Responsive image */
+    height: auto;
+}
+
+button {
+    background-color: #d50000; /* Red button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a00000; /* Darker red on hover */
+}
+
+.hidden {
+    display: none; /* Hide surprise message initially */
+}
+
+/* Mobile-first styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        width: 100%;
+    }
+}
