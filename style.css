@@ -1,7 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe6e6; /* Light pink background */
-    color: #d50000; /* Dark red text */
+    background-image: url('background.jpg'); /* Add a romantic background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    color: #ffffff; /* Change text color to white for better contrast */
     text-align: center;
     padding: 20px;
 }
@@ -9,37 +11,49 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .heart-image {
-    width: 100px; /* Responsive image */
+    width: 120px; /* Slightly larger responsive image */
     height: auto;
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 button {
     background-color: #d50000; /* Red button */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding for a larger button */
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 25px; /* More rounded button */
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 button:hover {
     background-color: #a00000; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .hidden {
     display: none; /* Hide surprise message initially */
 }
 
+.footer {
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Smaller font for footer */
+}
+
 /* Mobile-first styles */
 @media (max-width: 600px) {
     h1 {
-        font-size: 24px;
+        font-size: 28px; /* Larger heading on mobile */
     }
     button {
-        width: 100%;
+        width: 100%; /* Full-width button on mobile */
     }
 }
