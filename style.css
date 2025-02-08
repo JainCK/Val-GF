@@ -1,59 +1,100 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('background.jpg'); /* Add a romantic background image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background image */
-    color: #ffffff; /* Change text color to white for better contrast */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333333;
     text-align: center;
+}
+
+header, footer {
+    background-color: rgba(255, 0, 0, 0.8);
     padding: 20px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+h1 {
+    font-size: 48px;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;;
 }
 
-.heart-image {
-    width: 120px; /* Slightly larger responsive image */
+p {
+    font-size: 24px;
+}
+
+.photo-marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.marquee-img {
+    width: 200px; /* Fixed width for each image */
     height: auto;
-    margin: 20px 0; /* Add margin for spacing */
+    margin-right: 10px; /* Space between images */
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.btn {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 button {
-    background-color: #d50000; /* Red button */
+    background-color: #d50000;
     color: white;
     border: none;
-    padding: 12px 24px; /* Increased padding for a larger button */
+    width: 250px; /* Fixed width */
+    height: 50px; /* Fixed height */
     cursor: pointer;
-    border-radius: 25px; /* More rounded button */
-    font-size: 18px; /* Larger font size */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    border-radius: 30px;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #a00000; /* Darker red on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: #a00000;
+    transform: scale(1.1);
 }
 
 .hidden {
-    display: none; /* Hide surprise message initially */
+    display: none;
 }
 
-.footer {
-    margin-top: 20px; /* Space above footer */
-    font-size: 14px; /* Smaller font for footer */
+footer {
+    font-size: 18px;
 }
 
-/* Mobile-first styles */
 @media (max-width: 600px) {
+    .gallery-img {
+        width: 100%; /* Full width on smaller screens */
+    }
     h1 {
-        font-size: 28px; /* Larger heading on mobile */
+        font-size: 28px; /* Further reduced for mobile */
+    }
+    p {
+        font-size: 16px; /* Further reduced for mobile */
     }
     button {
-        width: 100%; /* Full-width button on mobile */
+        font-size: 16px; /* Further reduced for mobile */
+    }
+    header, footer {
+        padding: 50px;
     }
 }
