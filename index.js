@@ -5,7 +5,7 @@ document.getElementById('surpriseButton').addEventListener('click', function() {
     popup.innerHTML = `
         <div class="popup-content">
             <span class="close-button">&times;</span>
-            <p>sa huli ikaw ang pipiliin ko at lagi kitang mamahalin</p>
+            <p>My love, on this special <strong style="color: red;">Valentine’s Day</strong>, I want you to know just how much you mean to me. Your tampo is like a passing storm—brief yet stirring, making me miss your smile even more. And when you finally let me in, your lambing feels like the sun breaking through the clouds, warm and comforting, making me fall for you all over again. No matter how many little storms we face, I will always find my way back to you. Because in this life and the next, <strong style="color: red;">sa huli ikaw ang pipiliin ko at lagi kitang mamahalin. ❤️</strong></p>
         </div>
     `;
     document.body.appendChild(popup);
@@ -43,10 +43,13 @@ style.innerHTML = `
         border-radius: 10px;
         padding: 20px;
         text-align: center;
-        width: 300px; /* Fixed width */
-        height: 200px; /* Fixed height */
-        font-family: "Pacifico", serif;
-        font-weight: 400;
+        width: 400px; /* Increased width for better content fit */
+        height: auto; /* Changed to auto to fit content height */
+        max-height: 80%; /* Added max-height to prevent overflow */
+        overflow-y: auto; /* Added overflow for scrolling if needed */
+         font-family: "Satisfy", serif;
+  font-weight: 400;
+  font-style: normal;
     }
     .close-button {
         cursor: pointer;
